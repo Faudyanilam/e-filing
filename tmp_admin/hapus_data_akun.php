@@ -1,0 +1,16 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<?php 
+include '../koneksi.php';
+
+$id = $_GET['id'];
+
+$data = mysqli_query($koneksi,"DELETE FROM tb_registrasi_akun WHERE id_regis='$id'");
+
+if($data == 1){
+	header("location:data_akun_wp.php?hasil=data_terhapus");
+}else{
+	header("location:data_akun_wp.php?hasil=data_gagalterhapus");
+
+}
+?>

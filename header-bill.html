@@ -1,0 +1,69 @@
+
+<div class="header" style="position: fixed;">
+  <div class="row">
+    <div class="col-sm-4">
+      <a href="../index.html">
+        <img class="img" src="../img/logo.png">
+      </a>
+    </div>
+    <!-- <?php session_start(); ?> -->
+    <div class="col-sm-7">
+      <h5 style="color: rgb(255,157,49); font-weight: bold; text-align: right; padding-top: 13px;"><?php echo $_SESSION['nama_ktp']; ?></h5>
+    </div>
+    <div class="col-sm-1" style="padding-top: 13px;">
+     <!-- <div class="dropdown" style="padding-top: 15px;"> -->
+      <a href="../logout.php" align="center" type="button" style="color: rgb(255, 157, 49);"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+   <!--    <ul class="dropdown-menu" style="background-color: white">
+        <li><a href="#" data-toggle="modal" data-target="#ModalLogout"><b>Logout</b></a></li> -->
+        <!-- <li><a href="../logout.php" onclick="return confirm('Apakah anda yakin ingin keluar ?')"><b>Logout</b></a></li> -->
+        <!-- <li><a href="../logout.php?hasil=gagal"><b>Logout</b></a></li> -->
+      <!-- </ul> --> 
+    <!-- </div> -->
+  </div>
+
+ <!-- Modal Logout -->
+     <!--  <div id="ModalLogout" class="modal fade" tabindex="-1" role="dialog">
+
+        <div class="modal-dialog modal-dialog-centered" role="document" aria-labelledby="ModalLogoutTitle" aria-hidden="true">
+
+          <div class="modal-content">
+
+            <div class="modal-body">
+
+              <center>
+                <h3><strong>Logout</strong></h3>
+              </center>
+
+              <br>
+
+              <center>
+                <h4>Yakin ingin Logout ? </h4>
+              </center>
+                    
+            </div> -->
+                    
+            <!-- <form action="logout.php" role="form" method="post"> -->
+
+              <!-- Input token user admin -->
+              <!-- <input type="hidden" id="email" name="email" value="<?php echo $email; ?>"> -->
+              <!-- End Input token user admin -->
+
+
+            <!--   <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <a href="../logout.php">
+                <button type="button" id="btn-del" class="btn btn-danger">Logout</button>
+              </a>
+              </div> -->
+
+            <!-- </form> -->
+
+      <!--     </div>
+
+        </div>
+
+      </div> -->
+      <!-- End Modal Logout -->
+
+</div>
+</div>

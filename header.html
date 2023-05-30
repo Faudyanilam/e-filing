@@ -1,0 +1,290 @@
+<?php
+include "cek_paket.php";
+$bg_color = $_SESSION['bg_color'];
+$akun = $_SESSION['akun'];
+$modal = $_SESSION['modal'];
+?>
+
+<div class="header">
+
+  <div class="row">
+
+    <div class="col-sm-4">
+
+      <a href="index.html">
+
+        <img class="img" src="img/logo.png">
+        
+      </a>
+      <a style="margin-left: 10px;background-color: <?php echo $bg_color; ?>; text-transform:uppercase;" data-toggle="modal" data-target="<?php echo $modal; ?>" 
+        type="button" id="tombol_langganan" class="btn"><?php echo $akun; ?></a>
+
+    </div>
+
+
+    <div class="col-sm-7">
+
+      <h5 style="color: rgb(255,157,49); font-weight: bold; text-align: right; padding-top: 13px;"><?php echo $_SESSION['nama_ktp']; ?></h5>
+
+    </div>
+
+    <div class="col-sm-1">
+
+     <div class="dropdown" style="padding-top: 15px;">
+
+      <a class="dropdown-toggle" type="button" data-toggle="dropdown" style="color: rgb(255, 157, 49); padding-left: 0px"><i class="fas fa-user-circle fa-2x"></i><span class="caret"></span></a>
+
+      <ul class="dropdown-menu" style="background-color: white">
+
+        <li><a href="#" data-toggle="modal" data-target="#ModalLogout"><b>Logout</b></a></li>
+
+        <!-- <li><a href="../logout.php" onclick="return confirm('Apakah anda yakin ingin keluar ?')"><b>Logout</b></a></li> -->
+
+        <!-- <li><a href="../logout.php?hasil=gagal"><b>Logout</b></a></li> -->
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Modal Logout -->
+
+      <div id="ModalLogout" class="modal fade" tabindex="-1" role="dialog">
+
+
+
+        <div class="modal-dialog modal-dialog-centered" role="document" aria-labelledby="ModalLogoutTitle" aria-hidden="true">
+
+
+
+          <div class="modal-content">
+
+
+
+            <div class="modal-body">
+
+
+
+              <center>
+
+                <h3><strong>Logout</strong></h3>
+
+              </center>
+
+
+
+              <br>
+
+
+
+              <center>
+
+                <h4>Yakin ingin Logout ? </h4>
+
+              </center>
+
+                    
+
+            </div>
+
+                    
+
+            <!-- <form action="logout.php" role="form" method="post"> -->
+
+
+
+              <!-- Input token user admin -->
+
+              <!-- <input type="hidden" id="email" name="email" value="<?php echo $email; ?>"> -->
+
+              <!-- End Input token user admin -->
+
+
+
+
+
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+
+                <a href="logout.php">
+
+                <button type="button" id="btn-del" class="btn btn-danger">Logout</button>
+
+              </a>
+
+              </div>
+
+
+
+            <!-- </form> -->
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+      <!-- End Modal Logout -->
+
+</div>
+
+</div>
+
+<div class="modal fade" id="modal_berlangganan" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" style="margin-left: 4px; margin-top: 4px;">Menu langganan</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right: 4px; margin-top: 4px; width: 50px; font-size: x-large;">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <div class="modal-body">
+      <div align="center">
+        <h3 style="color:red;">Paket trial anda akan habis dalam <?php echo $diff_str; ?> hari</h3>
+        <hr>
+      </div>
+      <div  align="center" style="display: flex; justify-content: center;">
+        
+        <div class="container_1">
+          <div class="pilihan_langganan">
+            <div style="width: 26rem; height: 29rem;">
+              <br/>
+              <b><h3>Paket Basic</h3></b>
+              <hr>
+              <div class="card-body" >
+
+                <div align="center">
+                  <p class="card-text p_text_1">Multi user 32 account<br/>
+                    Full control<br/>
+                    Masa aktif 3 bulan <br/>
+                    Harga Rp100.000</p>
+                  <br/>
+                  <a href="tbl_basic.php" type="button" class="btn btn-primary" style="width: 100%;">Basic</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container_2">
+          <div class="pilihan_langganan">
+            <div  style="width: 26rem; height: 29rem;">
+              <br/>
+              <b><h3>Paket Pro</h3></b>
+              <hr>
+              <div class="card-body">
+
+                <div align="center">
+                  <p class="card-text p_text_1">Multi user 64 account<br/>
+                    Full control<br/>
+                    Masa aktif 6 bulan <br/>
+                    Harga Rp200.000</p>
+                  <br/>
+                  <a href="tbl_pro.php" type="button" class="btn btn-warning" style="background-color: #FF9D31;width: 100%;">Pro</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+
+
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal_berlangganan_1" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" style="margin-left: 4px; margin-top: 4px;">Menu langganan</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right: 4px; margin-top: 4px; width: 50px; font-size: x-large;">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <div class="modal-body">
+      <div  align="center" style="display: flex; justify-content: center;">
+        <div class="container_1">
+          <div class="pilihan_langganan">
+            <div style="width: 26rem; height: 29rem;">
+              <br/>
+              <b><h3>Paket Basic</h3></b>
+              <hr>
+              <div class="card-body" >
+
+                <div align="center">
+                  <p class="card-text p_text_1">Multi user 32 account<br/>
+                    Full control<br/>
+                    Masa aktif 3 bulan <br/>
+                    Harga Rp100.000</p>
+                  <br/>
+                  <a href="tbl_basic.php" type="button" class="btn btn-primary" style="width: 100%;">Basic</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container_2">
+          <div class="pilihan_langganan">
+            <div  style="width: 26rem; height: 29rem;">
+              <br/>
+              <b><h3>Paket Pro</h3></b>
+              <hr>
+              <div class="card-body">
+
+                <div align="center">
+                  <p class="card-text p_text_1">Multi user 64 account<br/>
+                    Full control<br/>
+                    Masa aktif 6 bulan <br/>
+                    Harga Rp200.000</p>
+                  <br/>
+                  <a href="tbl_pro.php" type="button" class="btn btn-warning" style="background-color: #FF9D31;width: 100%;">Pro</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+
+
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal telah berlangganan -->
+<div class="modal fade" id="modal_telah_berlangganan" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header" >
+          <h3 class="modal-title" style="margin-left: 4px; margin-top: 4px;"></h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-right: 4px; margin-top: 4px; width: 50px; font-size: x-large;">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <div class="modal-body">
+        <div align="center" style="margin-bottom: 20px;">
+            <h3>Terimakasih telah berlangganan</h3>
+            <h4 style="color: red;">Masa berlaku tersisa <?php echo $diff_str; ?>
+               hari lagi</h4>
+            <br><br>
+            <a data-toggle="modal" data-target="#modal_berlangganan_1"  data-dismiss="modal" type="button" class="btn btn-success" style="width: 75%;">Menu Langganan</a>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+

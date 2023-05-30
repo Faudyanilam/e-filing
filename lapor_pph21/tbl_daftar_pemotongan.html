@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="icon" type="image/png" href="assets/img/icon.png" /> 
+    <title>E-Spt PPH21 Edukasi</title>
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Imperial - v5.5.0
+  * Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="wow fadeIn">
+        <div class="hero-logo">
+          <img class="" src="assets/img/logopoltek.png" alt="logopoltek">
+        </div>
+
+        <h1>Selamat Datang di PPH21 versi Edukasi</h1>
+        <h2>PPH21 <span class="typed" data-typed-items="Perhitungan Pajak, Pelaporan Pajak, Versi Edukasi"></span></h2>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="beranda.php" class="logo mr-auto"><img src="assets/img/logopoltek.png" alt=""></a>
+      <!-- Uncomment below if you prefer to use a text logo -->
+      <!-- <h1 class="logo mr-auto"><a href="beranda.php">Imperial</a></h1> -->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown"><a href="#"><span>Database</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#" >Buka Perusahaan</a></li>
+              <li><a href="" data-bs-toggle="modal" data-bs-target="#npwpModal">Daftarkan Perusahaan</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Pilih SPT</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a href="" data-bs-toggle="modal" data-bs-target="#buatspt">Buat SPT Baru</a></li>
+                <li><a href="#">Buka SPT</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Isi SPT</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Daftar Bukti Potong</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Tidak Final (1721-II)</a></li>
+                  <li><a href="#">Final (1721-III)</a></li>
+                  <li><a href="A1.html">A1</a></li>
+                  <li><a href="#">A2</a></li>
+                </ul>
+              <li class="dropdown"><a href="#"><span>Daftar Pemotongan Pajak (1721-I)</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                    <li><a href="#">Satu Masa Pajak</a></li>
+                  <li><a href="#">Satu Tahun Pajak</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Daftar Biaya (1721-V)</a></li>
+              <li><a href="#">SPT Induk (1721)</a></li>
+              <li><a href="#">Daftar SSP/Pbk (1721-IV)</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link scrollto" href="#">CSV</a></li>
+          <li><a class="nav-link scrollto" href="#">Cetak</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Referensi</a></li>
+          <li><a class="nav-link scrollto" href="#about">Profil</a></li>
+          <li><a class="nav-link scrollto" href="#services">Help</a></li>
+          <li><a class="las la-user" href="logout-user.php">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Modal -->
+<div class="modal fade" id="buatspt" tabindex="-1" aria-labelledby="buatsptLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="buatsptLabel">Masukkan Masa SPT</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <input type="date" class="form-control" id="inputnpwp" aria-describedby="npwpHelp"> 
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+          <a href="#"><button type="button" class="btn btn-primary">Buat SPT</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- ======= bagian A ======= -->
+<section id="contact">
+  <div class="container wow fadeInUp">
+    <div id="A">
+    <div class="card mx-auto">
+    <div class="row">
+      <div class="col-md-12">
+          <br>
+        <h3 class="section-title">Surat Pemberitahuan (SPT) Masa Pajak Penghasilan Pasal 21 Dan/Atau Pasal 26</h3>
+        <h3 class="section-title">Masa Pajak : 08-2021 (Normal)</h3>
+        <div class="section-title-divider"></div>
+      </div>
+    </div>
+    <div class="col-md-12 mx-auto">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#A">B.1. Daftar Pemotongan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#B">B.2. Penghitungan PPh</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#C">C. Objek Pajak Final</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#D">D. Lampiran</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#E">E. Pernyataan dan Ttd Pemotong</a>
+          </li>
+      </ul>
+</div>
+
+        <table class="table table-bordered border-dark table-striped">
+        <thead>
+			<tr align="center" valign="middle">
+				<th>NO</th>
+				<th>PENERIMA PENGHASILAN</th>
+                <th>KODE OBJEK PAJAK</th>
+                <th>JUMLAH PENERIMA PENGHASILAN</th>
+                <th>JUMLAH PENGHASILAN BRUTO (Rp.)</th>
+                <th>JUMLAH PAJAK PENGHASILAN (Rp.)</th>									
+			</tr>
+		</thead>
+		<tbody>
+			<tr >
+				<td align="center">1</td>
+				<td>PEGAWAI TETAP</td>
+                <td>21-100-01</td>
+                <td align="right">1</td>
+                <td align="right">10.000.000</td>
+                <td align="right">500.000</td>
+			</tr>
+            <tr>
+				<td align="center">2</td>
+				<td>PENERIMA PENSIUN BERKALA</td>
+                <td>21-100-02</td>
+                <td >
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+			</tr>
+            <tr>
+				<td align="center">3</td>
+				<td>PEGAWAI TIDAK TETAP ATAU TENAGA KERJA LEPAS</td>
+                <td>21-100-03</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+			</tr>
+            <tr>
+                <td rowspan="7" align="center">4</th>
+                <td>BUKAN PEGAWAI:</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>4a. DISTRIBUTOR MULTILEVEL MARKETING (MLM)</td>
+                <td>21-100-04</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td>4b. PETUGAS DINAS LUAR ASURANSI</td>
+                <td>21-100-05</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+              </tr>
+              <tr>
+                <td>4c. PENJAJA BARANG DAGANGAN</td>
+                <td>21-100-06</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td>4d. TENAGA AHLI</td>
+                <td>21-100-07</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+              </tr>
+              <tr>
+                <td>4e. BUKAN PEGAWAI YANG MENERIMA IMBALAN YANG BERSIFAT KESINAMBUNGAN</td>
+                <td>21-100-08</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td>4f. BUKAN PEGAWAI YANG MENERIMA IMBALAN YANG TIDAK BERSIFAT KESINAMBUNGAN</td>
+                <td>21-100-09</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+              </tr>
+
+              <tr>
+                <td align="center">5</td>
+                <td>ANGGOTA DEWAN KOMISARIS ATAU DEWAN PENGAWAS YANG TIDAK MERANGKAP SEBAGAI PEGAWAI TETAP</td>
+                <td>21-100-10</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="center">6</td>
+                <td>MANTAN PEGAWAI YANG MENERIMA JASA PRODUKSI, TANTIEM, BONUS, ATAU IMBALAN LAIN</td>
+                <td>21-100-11</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+              </tr>
+              <tr>
+                <td align="center">7</td>
+                <td>PEGAWAI YANG MELAKUKAN PENARIKAN DANA PENSIUN</td>
+                <td>21-100-12</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="center">8</td>
+                <td>PESERTA KEGIATAN</td>
+                <td>21-100-13</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+              </tr>
+              <tr>
+                <td align="center">9</td>
+                <td>PENRIMA PENGHASILAN YANG DIPOTONG PPh PASAL 21 TIDAK FINAL LAINNYA</td>
+                <td>21-100-99</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align="center">10</td>
+                <td>PEGAWAI/PEMBERI JASA/PESERTA KEGIATAN PENERIMA PENSIUN BERKALA SEBAGAI WAJIB PAJAK LUAR NEGERI</td>
+                <td>21-100-99</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+              </tr>
+              <tr>
+                <td align="center">11</td>
+                <td><b>JUMLAH (PENJUMLAHAN ANGKA 1 S.D 10)</b></td>
+                <td> </td>
+                <td align="right">8</td>
+                <td align="right">797.049.600</td>
+                <td align="right">18.525.000</td>
+              </tr>
+		</tbody>
+	</table>
+</div>
+            <br>
+            <br>
+            <br>
+          </form>
+        </div>
+      </div>
+
+    </div>
+</div>
+  </div></div>
+</section><!-- End Contact Section -->
+
+
+<!-- Bagian B Perhitungan PPh-->
+<section id="contact">
+  <div class="container wow fadeInUp">
+    <div id="B">
+    <div class="card mx-auto">
+    <div class="row">
+      <div class="col-md-12">
+          <br>
+        <h3 class="section-title">Surat Pemberitahuan (SPT) Masa Pajak Penghasilan Pasal 21 Dan/Atau Pasal 26</h3>
+        <h3 class="section-title">Masa Pajak : 12-2017 (Normal)</h3>
+        <div class="section-title-divider"></div>
+      </div>
+    </div>
+    <div class="col-md-12 mx-auto">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="#A">B.1. Daftar Pemotongan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#B">B.2. Penghitungan PPh</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#C">C. Objek Pajak Final</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#D">D. Lampiran</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#E">E. Pernyataan dan Ttd Pemotong</a>
+          </li>
+      </ul>
+</div>
+    <div id="c">
+        <table class="table table-bordered border-dark table-striped">
+        <thead>
+			<tr align=center valign=middle>
+				<th>NO</th>
+				<th >PENGHITUNGAN PPh PASAL 21 DAN/ATAU PASAL 26 YANG KURANG (LEBIH) DISETOR </th>
+                <th>JUMLAH (Rp.)</th>								
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td align=center valign=middle>12</td>
+				<td>STP PPh PASAL 21 DAN/ATAU PASAL 26 (HANYA POKOK PAJAK)</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+			</tr>
+            <tr>
+				<td rowspan="2" align=center valign=top>13</td>
+				<td>KELEBIHAN PENYETORAN PPh PASAL 21 DAN/ATAU PASAL 26 DARI:</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+                </td>
+			</tr>
+                <tr>
+                <td>MASA PAJAK (mm) : &nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="01">
+                    <label class="form-check-label" for="01" >01</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="02">
+                    <label class="form-check-label" for="02">02</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="03">
+                    <label class="form-check-label" for="03">03</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="04">
+                    <label class="form-check-label" for="04">04</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="05">
+                    <label class="form-check-label" for="05">05</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="06">
+                    <label class="form-check-label" for="06">06</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="07">
+                    <label class="form-check-label" for="07">07</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="08">
+                    <label class="form-check-label" for="08">08</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="09">
+                    <label class="form-check-label" for="09">09</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="10">
+                    <label class="form-check-label" for="10">10</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="11">
+                    <label class="form-check-label" for="11">11</label> &nbsp;&nbsp;
+                    <input class="form-check-input" type="checkbox" name="flexCheckboxDefault" id="12">
+                    <label class="form-check-label" for="12">12</label>
+                </td>
+                <td>TAHUN (yyyy) : 
+                        <input type="text" class="form-control">
+                </td>
+                </tr>
+            <tr>
+				<td align=center valign=middle>14</td>
+				<td>JUMLAH (ANGKA 12 + ANGKA 13)</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+			</tr>
+              <tr>
+                <td align=center valign=middle>15</td>
+                <td>PPh PASAL 21 DAN/ATAU PASAL 26 YANG KURANG (LEBIH) DISETOR (ANGKA 11 KOLLOM 6 - ANGKA 14)</td>
+                <td align="right">18.525.500</td>
+              </tr>
+              <tr>
+                <td align=center valign=middle></td>
+                <td class="fst-italic">LANJUTKAN PENGISIAN PADA ANGKA 16 DAN 17 APABILA SPT PEMBETULAN DAN/ATAU PADA ANGKA 18 APABILA PPH LEBIH DISETOR</td>
+              </tr>
+              <tr>
+                <td align=center valign=middle>16</td>
+                <td>PPh PASAL 21 DAN/ATAU PASAL 26 YANG KURANG (LEBIH) DISETOR PADA SPT YANG DIBETULKAN (PINDAHAN DARI BAGIAN B ANGKA 15 DARI SPT YANG DIBETULKAN)</td>
+                <td align="right">0</td>
+              </tr>
+              <tr>
+                <td align=center valign=middle>17</td>
+                <td>PPh PASAL 21 DAN/ATAU PASAL 26 YANG KURANG (LEBIH) DISETOR KARENA PEMBETULAN (ANGKA 15 - ANGKA 16)</td>
+                <td><div>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </div></td>
+              </tr>
+              <tr>
+                <td align=center valign=middle>18</td>
+                <td>KELEBIHAN SETOR PADA ANGKA 15 ATAU ANGKA 17 AKAN DIKOMPENSASIKAN KE MASA PAJAK (mm): </td>
+                <td>TAHUN KALENDER (yyyy):
+                    <div>
+                        <input type="text" class="form-control" >
+                    </div>
+                </td>
+              </tr>
+		</tbody>
+	</table>
+</div>
+</div>
+            <br>
+            <br>
+            <br>
+          </form>
+        </div>
+      </div>
+
+    </div>
+</div>
+  </div>
+</section><!-- End Contact Section -->
+
+
+<!--Bagian C Objek Pajak Final-->
+<section id="contact">
+  <div class="container wow fadeInUp">
+    <div id="C">
+    <div class="card mx-auto">
+    <div class="row">
+      <div class="col-md-12">
+          <br>
+        <h3 class="section-title">Surat Pemberitahuan (SPT) Masa Pajak Penghasilan Pasal 21 Dan/Atau Pasal 26</h3>
+        <h3 class="section-title">Masa Pajak : 08-2021 (Normal)</h3>
+        <div class="section-title-divider"></div>
+      </div>
+    </div>
+    <div class="col-md-12 mx-auto">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="#A">B.1. Daftar Pemotongan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#B">B.2. Penghitungan PPh</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#C">C. Objek Pajak Final</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#D">D. Lampiran</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#E">E. Pernyataan dan Ttd Pemotong</a>
+          </li>
+      </ul>
+</div>
+
+        <table class="table table-bordered border-dark table-striped">
+        <thead>
+			<tr align="center" valign="middle">
+				<th>NO</th>
+				<th>PENERIMA PENGHASILAN</th>
+                <th>KODE OBJEK PAJAK</th>
+                <th>JUMLAH PENERIMA PENGHASILAN</th>
+                <th>JUMLAH PENGHASILAN BRUTO (Rp.)</th>
+                <th>JUMLAH PAJAK PENGHASILAN (Rp.)</th>									
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td align="center">1</td>
+				<td>PENERIMA UANG PESANGON YANG DIBAYARKAN SEKALIGUS</td>
+                <td>21-401-01</td>
+                <td><div>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </div></td>
+                <td><div>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </div></td>
+                <td><div>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </div></td>
+			</tr>
+            <tr>
+				<td align="center">2</td>
+				<td>PENERIMA UANG MANFAAT PENSIUN, TUNJANGAN HARI TUA ATAU JAMINAN HARI TUA DAN PEMBAYARAN SEJENIS YANG DIBAYARKAN SEKALIGUS</td>
+                <td>21-401-02</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+			</tr>
+            <tr>
+				<td align="center">3</td>
+				<td>PEJABAT NEGARA, PEGAWAI NEGERI SIPIL, ANGGOTA TNI/POLRI DAN PENSIUNAN YANG MENERIMA HONORARIUM DAN IMBALAN LAIN YANG DIBEBANKAN KEPADA KEUANGAN NEGARA/DAERAH</td>
+                <td>21-402-01</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+			</tr>
+            <tr>
+                <td align="center">4</th>
+                <td>PENERIMA PENGHASILAN YANG DIPOTONG PPh PASAL 21 FINAL LAINNYA</td>
+                <td>21-449-99</td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+                <td>
+                  <input type="text" class="form-control" style="text-align:right;">
+              </td>
+              </tr>
+              <tr>
+                <td align="center"><b>5</b></td>
+                <td><b>JUMLAH BAGIAN C (PENJUMLAHAN ANGKA 1 S.D 4)</b></td>
+                <td> </td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+              </tr>
+		</tbody>
+	</table>
+</div>
+            <br>
+            <br>
+            <br>
+          </form>
+        </div>
+      </div>
+
+    </div>
+</div>
+  </div></div>
+</section><!-- End Contact Section -->
+
+<!--Bagian D Lampiran-->
+<section id="contact">
+  <div class="container wow fadeInUp">
+    <div id="D">
+    <div class="card mx-auto">
+    <div class="row">
+      <div class="col-md-12">
+          <br>
+        <h3 class="section-title">Surat Pemberitahuan (SPT) Masa Pajak Penghasilan Pasal 21 Dan/Atau Pasal 26</h3>
+        <h3 class="section-title">Masa Pajak : 08-2021 (Normal)</h3>
+        <div class="section-title-divider"></div>
+      </div>
+    </div>
+    <div class="col-md-12 mx-auto">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="#A">B.1. Daftar Pemotongan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#B">B.2. Penghitungan PPh</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#C">C. Objek Pajak Final</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#D">D. Lampiran</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#E">E. Pernyataan dan Ttd Pemotong</a>
+          </li>
+      </ul>
+</div>
+<br><br>
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-8">
+
+      <form>
+        <div class="row mb-3">
+          <label class="col-sm-8 col-form-label"><input class="form-check-input" type="checkbox" id="lampiran1"> 1. FORMULIR 1721-I (Untuk Satu Masa Pajak) </label>
+          <div class="col-sm-2">
+            <input type="number" class="form-control" id="lampiran1" disabled>
+          </div>
+          <div  class="col-sm col-form-label">
+          <label >LEMBAR</label>
+        </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-8 col-form-label"><input class="form-check-input" type="checkbox" id="lampiran2"> 2. FORMULIR 1721-I (Untuk Satu Tahun Pajak) </label>
+          <div class="col-sm-2">
+            <input type="number" class="form-control" id="lampiran2" disabled>
+          </div>
+          <div  class="col-sm col-form-label">
+          <label >LEMBAR</label>
+        </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-8 col-form-label"><input class="form-check-input" type="checkbox" id="lampiran3"> 3. FORMULIR 1721-II</label>
+          <div class="col-sm-2">
+            <input type="number" class="form-control" id="lampiran3" disabled>
+          </div>
+          <div  class="col-sm col-form-label">
+          <label >LEMBAR</label>
+        </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-8 col-form-label"><input class="form-check-input" type="checkbox" id="lampiran4"> 4. FORMULIR 1721-III</label>
+          <div class="col-sm-2">
+            <input type="number" class="form-control" id="lampiran4" disabled>
+          </div>
+          <div  class="col-sm col-form-label">
+          <label >LEMBAR</label>
+        </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-8 col-form-label"><input class="form-check-input" type="checkbox" id="lampiran5"> 5. FORMULIR 1721-IV</label>
+          <div class="col-sm-2">
+            <input type="number" class="form-control" id="lampiran5" disabled>
+          </div>
+          <div  class="col-sm col-form-label">
+          <label >LEMBAR</label>
+        </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-8 col-form-label"><input class="form-check-input" type="checkbox" id="lampiran6"> 6. FORMULIR 1721-V</label>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-8 col-form-label"><input class="form-check-input" type="checkbox" id="lampiran7"> 7. SURAT SETORAN PAJAK (SSP) DAN/ATAU BUKTI PEMINDAHBUKUAN (Pbk)</label>
+          <div class="col-sm-2">
+            <input type="number" class="form-control" id="lampiran7">
+          </div>
+          <div  class="col-sm col-form-label">
+          <label >LEMBAR</label>
+        </div>
+        </div>
+        <div class="row mb-3">
+          <label class="col-sm-8 col-form-label"><input class="form-check-input" type="checkbox" id="lampiran8"> 8. SURAT KUASA KHUSUS</label>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+            <br>
+            <br>
+            <br>
+          </form>
+        </div>
+      </div>
+
+    </div>
+</div>
+  </div></div>
+</section><!-- End Contact Section -->
+
+<!--Bagian E Pernyataan dan TTD Pemotong-->
+<section id="contact">
+  <div class="container wow fadeInUp">
+    <div id="E">
+    <div class="card mx-auto">
+    <div class="row">
+      <div class="col-md-12">
+          <br>
+        <h3 class="section-title">Surat Pemberitahuan (SPT) Masa Pajak Penghasilan Pasal 21 Dan/Atau Pasal 26</h3>
+        <h3 class="section-title">Masa Pajak : 08-2021 (Normal)</h3>
+      </div>
+    </div>
+    <div class="col-md-12 mx-auto">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="#A">B.1. Daftar Pemotongan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#B">B.2. Penghitungan PPh</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#C">C. Objek Pajak Final</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#D">D. Lampiran</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#E">E. Pernyataan dan Ttd Pemotong</a>
+          </li>
+      </ul>
+</div>
+
+<p class="section-description" style="padding: 50px;">Dengan menyadari sepenuhnya atas segala akibatnya termasuk sanksi-sanksi sesuai dengan ketentuan yang berlaku, saya menyatakan bahwa apa yang telah saya beritahukan diatas beserta lampiran-lampirannya adalah benar, lengkap dan jelas</p>
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-8">
+
+      <form>
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">1. </label>
+          <div class="col-sm-5">
+            <select id="pemotong" value="pemotong" class="form-select" disabled>
+              <option selected>PEMOTONG</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="npwp" class="col-sm-3 col-form-label">2. NPWP</label>
+          <div class="col-sm-8">
+            <input type="number" class="form-control" id="npwp">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="nama" class="col-sm-3 col-form-label">3. NAMA</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="nama">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="tanggal" class="col-sm-3 col-form-label">4. TANGGAL</label>
+          <div class="col-sm-8">
+            <input type="date" class="form-control" id="tanggal">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="tempat" class="col-sm-3 col-form-label">5. TEMPAT</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control" id="tempat">
+          </div>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+  
+        <br>
+        <br>
+        <div class="form-group mt-4">
+        <div class="text-center">
+          <a href="#" type="button" class="btn btn-secondary" >CETAK</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#E" type="button" class="btn btn-secondary" >BATAL</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="btn btn-primary" type="submit">SIMPAN</button></div>
+          </div>
+        <br>
+        <br>
+        <br>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+</section><!-- End Contact Section -->
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>Website PPh21 Edukasi</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+          -->
+            Designed by <a href="#">Tim PBL PPh21 Polibatam</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
